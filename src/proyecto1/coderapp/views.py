@@ -16,3 +16,6 @@ def leer_alumnos(request):
         "cursos": ["python", "C", "java"]
     }
     return render(request,'plantilla.html', contexto)
+
+def index(request):
+    return render(request, 'index.html')
