@@ -2,5 +2,12 @@
 {% load static %}
 {% block contenidoQueCambia %}
 <h1>Información de la pagina de inicio</h1>
+{{mensaje}}
 <h2>Se hereda del padre.html</h2>
+{% if request.user.is_authenticated %}
+<div class="text-center">
+    <img height="480px" src="{{url}}">
+    <h1>Hola {{user.username}}</h1>
+</div>
+{% endif %}
 {% endblock %}
